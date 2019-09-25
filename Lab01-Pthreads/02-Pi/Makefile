@@ -1,16 +1,18 @@
 CC=gcc
-CFLAGS= -Wall -pthread -o
+CFLAGS= -Wall -o
 
 all: calcPi calcPi_pthreads_2 calcPi_pthreads_4 calcPi_pthreads_8
 
 calcPi:
-		$(CC) calcPi.c $(CFLAGS) calcPi.o
+		$(CC) src/calcPi.c $(CFLAGS) bin/calcPi
 
 calcPi_pthreads_2:
-		$(CC) calcPi_pthreads_2.c $(CFLAGS) calcPi_pthreads_2.o
+		$(CC) src/calcPi_pthreads_2.c -pthread $(CFLAGS) bin/calcPi_pthreads_2
 
 calcPi_pthreads_4:
-		$(CC) calcPi_pthreads_4.c $(CFLAGS) calcPi_pthreads_4.o
+		$(CC) src/calcPi_pthreads_4.c -pthread $(CFLAGS) bin/calcPi_pthreads_4
 
 calcPi_pthreads_8:
-		$(CC) calcPi_pthreads_8.c $(CFLAGS) calcPi_pthreads_8.o
+		$(CC) src/calcPi_pthreads_8.c -pthread $(CFLAGS) bin/calcPi_pthreads_8
+
+
