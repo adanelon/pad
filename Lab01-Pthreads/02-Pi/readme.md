@@ -1,0 +1,1 @@
+Executar o arquivo pi.sh
